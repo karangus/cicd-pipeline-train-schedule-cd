@@ -1,8 +1,6 @@
 pipeline {
-stages {
-    stage('SCM') {
-        git 'https://github.com/karangus/cicd-pipeline-train-schedule-cd.git'
-    }
+    agent any
+    stages {
         stage('Build') {
             steps {
                 echo 'Running build automation'
